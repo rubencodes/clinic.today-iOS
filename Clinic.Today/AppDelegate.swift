@@ -8,16 +8,43 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-                            
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     var window: UIWindow?
-
+    var patient: Patient?
+    var clinic:  Clinic?
+    var locationManager: CLLocationManager?
+    var coordinate: CLLocationCoordinate2D?
+    var primaryColor   = UIColor(red: 121/255, green: 160/255, blue: 171/255, alpha: 1)
+    var secondaryColor = UIColor(red: 34/255,  green: 68/255,  blue: 129/255, alpha: 1)
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        UINavigationBar.appearance().translucent  = false
+        UINavigationBar.appearance().tintColor    = self.secondaryColor
+        UINavigationBar.appearance().barTintColor = self.primaryColor
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 28), NSForegroundColorAttributeName : UIColor.whiteColor()]
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName : UIFont(name: "OpenSans-Light", size: 18)], forState: UIControlState.Normal)
+        self.locationManager = CLLocationManager()
+        self.locationManager!.delegate = self
+        self.locationManager!.distanceFilter  = kCLDistanceFilterNone
+        self.locationManager!.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager!.startUpdatingLocation()
+        self.locationManager!.requestWhenInUseAuthorization()
+
         return true
+    }
+
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        self.coordinate = manager.location.coordinate
+        manager.stopUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        NSLog("ERROR \(error.localizedDescription)")
     }
 
     func applicationWillResignActive(application: UIApplication!) {

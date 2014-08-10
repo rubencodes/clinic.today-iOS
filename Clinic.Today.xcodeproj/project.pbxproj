@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4552AD6A1997F1CD00F2BBF5 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4552AD671997F1CD00F2BBF5 /* OpenSans-Light.ttf */; };
+		4552AD6B1997F1CD00F2BBF5 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4552AD681997F1CD00F2BBF5 /* OpenSans-Regular.ttf */; };
+		4552AD6C1997F1CD00F2BBF5 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4552AD691997F1CD00F2BBF5 /* OpenSans-Semibold.ttf */; };
 		45C565DC1993D3E9003E3726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C565DB1993D3E9003E3726 /* AppDelegate.swift */; };
 		45C565DF1993D3E9003E3726 /* Clinic_Today.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 45C565DD1993D3E9003E3726 /* Clinic_Today.xcdatamodeld */; };
-		45C565E11993D3E9003E3726 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C565E01993D3E9003E3726 /* ViewController.swift */; };
+		45C565E11993D3E9003E3726 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C565E01993D3E9003E3726 /* HomeViewController.swift */; };
 		45C565E41993D3E9003E3726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C565E21993D3E9003E3726 /* Main.storyboard */; };
 		45C565E61993D3E9003E3726 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C565E51993D3E9003E3726 /* Images.xcassets */; };
 		45C565F21993D3E9003E3726 /* Clinic_TodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C565F11993D3E9003E3726 /* Clinic_TodayTests.swift */; };
+		45C565FC1993E88E003E3726 /* InsuranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C565FB1993E88E003E3726 /* InsuranceViewController.swift */; };
+		45C565FE1993E8A1003E3726 /* NearbyClinicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C565FD1993E8A1003E3726 /* NearbyClinicsViewController.swift */; };
+		45C566001993E8AF003E3726 /* ClinicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C565FF1993E8AF003E3726 /* ClinicViewController.swift */; };
+		45C566021993EB2F003E3726 /* Insurance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566011993EB2F003E3726 /* Insurance.swift */; };
+		45C566041993EC5A003E3726 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566031993EC5A003E3726 /* Clinic.swift */; };
+		45C566061993EFBB003E3726 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566051993EFBB003E3726 /* Patient.swift */; };
+		45E48D7C19947A0B00B8250C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45E48D7B19947A0B00B8250C /* CoreLocation.framework */; };
+		45E48D7E19953D0000B8250C /* SubmitPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E48D7D19953D0000B8250C /* SubmitPatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +37,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4552AD671997F1CD00F2BBF5 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		4552AD681997F1CD00F2BBF5 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		4552AD691997F1CD00F2BBF5 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		45C565D61993D3E9003E3726 /* Clinic.Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clinic.Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C565DA1993D3E9003E3726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45C565DB1993D3E9003E3726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45C565DE1993D3E9003E3726 /* Clinic_Today.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clinic_Today.xcdatamodel; sourceTree = "<group>"; };
-		45C565E01993D3E9003E3726 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45C565E01993D3E9003E3726 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		45C565E31993D3E9003E3726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45C565E51993D3E9003E3726 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		45C565EB1993D3E9003E3726 /* Clinic.TodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Clinic.TodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C565F01993D3E9003E3726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45C565F11993D3E9003E3726 /* Clinic_TodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic_TodayTests.swift; sourceTree = "<group>"; };
+		45C565FB1993E88E003E3726 /* InsuranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsuranceViewController.swift; sourceTree = "<group>"; };
+		45C565FD1993E8A1003E3726 /* NearbyClinicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyClinicsViewController.swift; sourceTree = "<group>"; };
+		45C565FF1993E8AF003E3726 /* ClinicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClinicViewController.swift; sourceTree = "<group>"; };
+		45C566011993EB2F003E3726 /* Insurance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insurance.swift; sourceTree = "<group>"; };
+		45C566031993EC5A003E3726 /* Clinic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
+		45C566051993EFBB003E3726 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		45E48D7B19947A0B00B8250C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		45E48D7D19953D0000B8250C /* SubmitPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45E48D7C19947A0B00B8250C /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +82,7 @@
 		45C565CD1993D3E9003E3726 = {
 			isa = PBXGroup;
 			children = (
+				45E48D7B19947A0B00B8250C /* CoreLocation.framework */,
 				45C565D81993D3E9003E3726 /* Clinic.Today */,
 				45C565EE1993D3E9003E3726 /* Clinic.TodayTests */,
 				45C565D71993D3E9003E3726 /* Products */,
@@ -77,9 +101,16 @@
 		45C565D81993D3E9003E3726 /* Clinic.Today */ = {
 			isa = PBXGroup;
 			children = (
-				45C565DB1993D3E9003E3726 /* AppDelegate.swift */,
-				45C565E01993D3E9003E3726 /* ViewController.swift */,
 				45C565E21993D3E9003E3726 /* Main.storyboard */,
+				45C565DB1993D3E9003E3726 /* AppDelegate.swift */,
+				45C565E01993D3E9003E3726 /* HomeViewController.swift */,
+				45C565FB1993E88E003E3726 /* InsuranceViewController.swift */,
+				45C565FD1993E8A1003E3726 /* NearbyClinicsViewController.swift */,
+				45C565FF1993E8AF003E3726 /* ClinicViewController.swift */,
+				45E48D7D19953D0000B8250C /* SubmitPatientViewController.swift */,
+				45C566011993EB2F003E3726 /* Insurance.swift */,
+				45C566031993EC5A003E3726 /* Clinic.swift */,
+				45C566051993EFBB003E3726 /* Patient.swift */,
 				45C565E51993D3E9003E3726 /* Images.xcassets */,
 				45C565DD1993D3E9003E3726 /* Clinic_Today.xcdatamodeld */,
 				45C565D91993D3E9003E3726 /* Supporting Files */,
@@ -90,6 +121,9 @@
 		45C565D91993D3E9003E3726 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4552AD671997F1CD00F2BBF5 /* OpenSans-Light.ttf */,
+				4552AD681997F1CD00F2BBF5 /* OpenSans-Regular.ttf */,
+				4552AD691997F1CD00F2BBF5 /* OpenSans-Semibold.ttf */,
 				45C565DA1993D3E9003E3726 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -161,6 +195,11 @@
 				TargetAttributes = {
 					45C565D51993D3E9003E3726 = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					45C565EA1993D3E9003E3726 = {
 						CreatedOnToolsVersion = 6.0;
@@ -192,8 +231,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4552AD6A1997F1CD00F2BBF5 /* OpenSans-Light.ttf in Resources */,
 				45C565E41993D3E9003E3726 /* Main.storyboard in Resources */,
+				4552AD6B1997F1CD00F2BBF5 /* OpenSans-Regular.ttf in Resources */,
 				45C565E61993D3E9003E3726 /* Images.xcassets in Resources */,
+				4552AD6C1997F1CD00F2BBF5 /* OpenSans-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,9 +253,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45C565E11993D3E9003E3726 /* ViewController.swift in Sources */,
+				45C566001993E8AF003E3726 /* ClinicViewController.swift in Sources */,
+				45C566041993EC5A003E3726 /* Clinic.swift in Sources */,
+				45C566061993EFBB003E3726 /* Patient.swift in Sources */,
+				45C565E11993D3E9003E3726 /* HomeViewController.swift in Sources */,
 				45C565DC1993D3E9003E3726 /* AppDelegate.swift in Sources */,
+				45C566021993EB2F003E3726 /* Insurance.swift in Sources */,
+				45E48D7E19953D0000B8250C /* SubmitPatientViewController.swift in Sources */,
 				45C565DF1993D3E9003E3726 /* Clinic_Today.xcdatamodeld in Sources */,
+				45C565FE1993E8A1003E3726 /* NearbyClinicsViewController.swift in Sources */,
+				45C565FC1993E88E003E3726 /* InsuranceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +448,7 @@
 				45C565F71993D3E9003E3726 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45C565F81993D3E9003E3726 /* Build configuration list for PBXNativeTarget "Clinic.TodayTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +457,7 @@
 				45C565FA1993D3E9003E3726 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
