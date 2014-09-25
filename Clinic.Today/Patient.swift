@@ -21,7 +21,6 @@ class Patient: NSObject {
         var patientInfo = NSDictionary(objects: [self.firstName, self.lastName, self.insurance_plan, self.email, self.phone, self.queue], forKeys: ["first_name", "last_name", "insurance_plan", "email", "phone", "queue"])
         var patientWrapper = NSDictionary(object: patientInfo, forKey: "patient")
         
-        UIApplication().networkActivityIndicatorVisible = true
         var urlString = "http://localhost:3000/api/v1/patients"
         var url = NSURL(string: urlString)
         var POST = NSMutableURLRequest(URL: url)
@@ -32,7 +31,6 @@ class Patient: NSObject {
         
         NSURLConnection.sendAsynchronousRequest(POST, queue: NSOperationQueue.mainQueue(), completionHandler: {
             (response : NSURLResponse?, data : NSData?, error : NSError?) in
-            UIApplication().networkActivityIndicatorVisible = false
             if error == nil {
                 if (response! as NSHTTPURLResponse).statusCode != 500 {
                     self.parseData(data!)

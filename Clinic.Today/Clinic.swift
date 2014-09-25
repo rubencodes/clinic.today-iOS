@@ -39,13 +39,11 @@ class Clinic: NSObject {
             ins = insurance.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         }
         
-        UIApplication().networkActivityIndicatorVisible = true
         var urlString = "http://localhost:3000/api/v1/clinics?lat=\(lat)&lon=\(lon)&dist=25000&ins=\(ins)"
         var url = NSURL(string: urlString)
         var urlRequest = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
             response, data, error in
-            UIApplication().networkActivityIndicatorVisible = false
             if error == nil {
                 Clinic.parseData(data)
             } else {
