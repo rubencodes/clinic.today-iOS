@@ -35,32 +35,31 @@ class NearbyClinicsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func clinicsDidLoad(notification : NSNotification) {
-        
-        var userInfo = notification.userInfo as NSDictionary
-        self.clinics = userInfo.objectForKey("Clinics") as? [Clinic]
-        
+        var userInfo = notification.userInfo as Dictionary<String, [Clinic]>
+        self.clinics = userInfo["Clinics"]
+
         self.tableView.reloadData()
         self.tableView.sizeToFit()
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
         loading.stopAnimating()
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let simpleTableIdentifier: NSString = "SimpleTableCell"
         
-        var cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: simpleTableIdentifier)
         }
         
-        cell.textLabel.text = self.clinics![indexPath.row].name
-        cell.detailTextLabel.text = "\(self.clinics![indexPath.row].distance) mi"
+        cell!.textLabel!.text = self.clinics![indexPath.row].name
+        cell!.detailTextLabel!.text = "\(self.clinics![indexPath.row].distance) mi"
         
-        return cell
+        return cell!
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return clinics!.count
     }
     
@@ -85,12 +84,12 @@ class NearbyClinicsViewController: UIViewController, UITableViewDataSource, UITa
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "selectedClinic" {
             var controller = segue.destinationViewController as ClinicViewController
-            self.delegate.clinic = self.clinics![tableView.indexPathForCell((sender as UITableViewCell)).row]
+            self.delegate.clinic = self.clinics![tableView.indexPathForCell((sender as UITableViewCell))!.row]
         }
     }
 

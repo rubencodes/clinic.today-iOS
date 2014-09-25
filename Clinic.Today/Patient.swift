@@ -21,7 +21,10 @@ class Patient: NSObject {
         var patientInfo = NSDictionary(objects: [self.firstName, self.lastName, self.insurance_plan, self.email, self.phone, self.queue], forKeys: ["first_name", "last_name", "insurance_plan", "email", "phone", "queue"])
         var patientWrapper = NSDictionary(object: patientInfo, forKey: "patient")
         
-        var POST = NSMutableURLRequest(URL: NSURL(string: "http://localhost:3000/api/v1/patients"))
+        UIApplication().networkActivityIndicatorVisible = true
+        var urlString = "http://localhost:3000/api/v1/patients"
+        var url = NSURL(string: urlString)
+        var POST = NSMutableURLRequest(URL: url)
         POST.HTTPMethod = "POST"
         POST.setValue("application/json", forHTTPHeaderField: "Accept")
         POST.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -29,12 +32,24 @@ class Patient: NSObject {
         
         NSURLConnection.sendAsynchronousRequest(POST, queue: NSOperationQueue.mainQueue(), completionHandler: {
             (response : NSURLResponse?, data : NSData?, error : NSError?) in
-            if error != nil {
-               NSLog(error!.localizedDescription)
-            } else {
+            UIApplication().networkActivityIndicatorVisible = false
+            if error == nil {
                 if (response! as NSHTTPURLResponse).statusCode != 500 {
                     self.parseData(data!)
+                } else {
+                    var alert = UIAlertView(title: "Server Error",
+                        message: "It's not you, it's us. Please try again later!",
+                        delegate: self,
+                        cancelButtonTitle: "OK")
+                    alert.show()
                 }
+            } else {
+                NSLog(error!.localizedDescription)
+                var alert = UIAlertView(title: "Network Error",
+                    message: "Sorry, we're having some trouble reaching our server at the moment. Please try again later!",
+                    delegate: self,
+                    cancelButtonTitle: "OK")
+                alert.show()
             }
         })
     }

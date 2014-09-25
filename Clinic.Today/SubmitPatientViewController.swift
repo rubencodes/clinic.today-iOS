@@ -32,8 +32,7 @@ class SubmitPatientViewController: UIViewController {
     }
     
     @IBAction func submitPatient(sender: AnyObject) {
-        var numerics     = NSCharacterSet(charactersInString: "0123456789").invertedSet
-        var cleanedPhone = self.phone.text.componentsSeparatedByCharactersInSet(numerics).combine("")
+        var cleanedPhone = self.phone.text.extractNumerics()
 
         if self.firstName.text == "" ||
             self.lastName.text == "" ||
@@ -62,7 +61,7 @@ class SubmitPatientViewController: UIViewController {
     }
     
     func patientDidSubmit(notification : NSNotification) {
-        self.navigationController.popToRootViewControllerAnimated(true)
+        self.navigationController!.popToRootViewControllerAnimated(true)
         var success = UIAlertView(title: "Success",
             message: "You are now in line at \(self.delegate.clinic!.name)! Your expected wait time is \(self.delegate.patient!.waitTime).",
             delegate: self,
@@ -92,5 +91,12 @@ extension Array {
             }
         }
         return str
+    }
+}
+
+extension String {
+    func extractNumerics() -> String {
+        var numerics = NSCharacterSet(charactersInString: "0123456789").invertedSet
+        return self.componentsSeparatedByCharactersInSet(numerics).combine("")
     }
 }

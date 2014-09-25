@@ -36,18 +36,25 @@ class Clinic: NSObject {
     class func GET(lat : Double, lon : Double, insurance : String) {
         var ins = ""
         if insurance != "I'll pay with cash" {
-            ins = insurance.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+            ins = insurance.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         }
         
+        UIApplication().networkActivityIndicatorVisible = true
         var urlString = "http://localhost:3000/api/v1/clinics?lat=\(lat)&lon=\(lon)&dist=25000&ins=\(ins)"
         var url = NSURL(string: urlString)
         var urlRequest = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
             response, data, error in
+            UIApplication().networkActivityIndicatorVisible = false
             if error == nil {
                 Clinic.parseData(data)
             } else {
                 NSLog("\(error.localizedDescription)")
+                var alert = UIAlertView(title: "Network Error",
+                    message: "Sorry, we're having some trouble reaching our server at the moment. Please try again later!",
+                    delegate: self,
+                    cancelButtonTitle: "OK")
+                alert.show()
             }
         })
     }

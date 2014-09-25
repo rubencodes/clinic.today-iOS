@@ -17,15 +17,22 @@ class Insurance: NSObject {
     }
     
     class func GET() {
+        UIApplication().networkActivityIndicatorVisible = true
         var urlString = "http://localhost:3000/api/v1/insurances"
         var url = NSURL(string: urlString)
         var urlRequest = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: {
             response, data, error in
+            UIApplication().networkActivityIndicatorVisible = false
             if error == nil {
                 Insurance.parseData(data)
             } else {
                 NSLog("\(error.localizedDescription)")
+                var alert = UIAlertView(title: "Network Error",
+                    message: "Sorry, we're having some trouble reaching our server at the moment. Please try again later!",
+                    delegate: self,
+                    cancelButtonTitle: "OK")
+                alert.show()
             }
         })
     }

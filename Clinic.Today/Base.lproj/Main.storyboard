@@ -77,7 +77,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDg-h7-psg">
                                 <rect key="frame" x="16" y="443" width="568" height="50"/>
-                                <color key="backgroundColor" red="0.40392156862745099" green="0.5607843137254902" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.43137254901960786" green="0.63529411764705879" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HwO-aJ-Ze1"/>
                                 </constraints>
@@ -97,7 +97,7 @@
                                     <constraint firstAttribute="height" constant="100" id="Etz-1T-hic"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="28"/>
-                                <color key="textColor" red="0.1019607843" green="0.1960784314" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.10980392156862745" green="0.24705882352941178" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you are experiencing a medical emergency, call 911 immediately." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="568" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-oH-mCI">
@@ -153,7 +153,7 @@
                                     <constraint firstAttribute="height" constant="50" id="VfE-k0-mKV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="28"/>
-                                <color key="textColor" red="0.1019607843" green="0.1960784314" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your insurance plan to only see clinics that accept it, or choose &quot;I'll pay with cash&quot;." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="568" translatesAutoresizingMaskIntoConstraints="NO" id="wAU-e5-I1L">
@@ -199,7 +199,7 @@
                     <navigationItem key="navigationItem" title="clinic.today" id="cex-Ru-iYI">
                         <barButtonItem key="backBarButtonItem" title="Plans" id="9HF-rv-0GV"/>
                         <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="zIB-Og-5W5">
-                            <color key="tintColor" red="0.10196078431372549" green="0.19607843137254902" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="Kpx-HT-ih1" kind="show" identifier="nearbyClinics" id="an6-CU-den"/>
                             </connections>
@@ -233,7 +233,7 @@
                                     <constraint firstAttribute="height" constant="50" id="kEe-uf-ead"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="28"/>
-                                <color key="textColor" red="0.1019607843" green="0.1960784314" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PU4-3L-EmQ">
@@ -324,7 +324,7 @@
                                             <constraint firstAttribute="height" constant="50" id="08M-it-aY3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="28"/>
-                                        <color key="textColor" red="0.1019607843" green="0.1960784314" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 miles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzO-Rb-jWH">
@@ -404,7 +404,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VW3-ds-Zq3">
                                         <rect key="frame" x="19" y="400" width="562" height="50"/>
-                                        <color key="backgroundColor" red="0.4039215686" green="0.56078431370000004" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.43137254901960786" green="0.63529411764705879" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="eRk-aL-tm9"/>
                                         </constraints>
@@ -419,7 +419,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCl-2w-gHz">
                                         <rect key="frame" x="19" y="355" width="137" height="37"/>
-                                        <color key="backgroundColor" red="0.1019607843" green="0.1960784314" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="aGw-E8-54K"/>
                                         </constraints>
@@ -434,7 +434,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwB-BY-OFF">
                                         <rect key="frame" x="164" y="355" width="137" height="37"/>
-                                        <color key="backgroundColor" red="0.1019607843" green="0.1960784314" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="pPJ-2D-Fx3"/>
                                         </constraints>
@@ -532,7 +532,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get in Line" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXf-ZK-acY">
                                 <rect key="frame" x="16" y="72" width="568" height="50"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="28"/>
-                                <color key="textColor" red="0.1019607843" green="0.1960784314" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mP6-Z1-ZiO">
@@ -578,6 +578,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzo-SG-G13">
                                 <rect key="frame" x="562" y="86" width="22" height="22"/>
+                                <color key="tintColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -625,7 +626,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="clinic.today" id="YPV-Ef-8Dn">
                         <barButtonItem key="rightBarButtonItem" title="Finish" id="13l-ve-sKj">
-                            <color key="tintColor" red="0.1019607843" green="0.1960784314" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.10980392160000001" green="0.2470588235" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="submitPatient:" destination="0TW-Kf-gxg" id="kKj-yB-cgp"/>
                             </connections>

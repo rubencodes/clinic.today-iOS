@@ -12,13 +12,13 @@ import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
-    var window: UIWindow?
+    var window:  UIWindow?
     var patient: Patient?
     var clinic:  Clinic?
     var locationManager: CLLocationManager?
     var coordinate: CLLocationCoordinate2D?
-    var primaryColor   = UIColor(red: 121/255, green: 160/255, blue: 171/255, alpha: 1)
-    var secondaryColor = UIColor(red: 34/255,  green: 68/255,  blue: 129/255, alpha: 1)
+    var primaryColor   = UIColor(red: 110/255, green: 162/255, blue: 173/255, alpha: 1)
+    var secondaryColor = UIColor(red: 28/255,  green: 63/255,  blue: 133/255, alpha: 1)
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         UINavigationBar.appearance().barTintColor = self.primaryColor
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 28), NSForegroundColorAttributeName : UIColor.whiteColor()]
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName : UIFont(name: "OpenSans-Light", size: 18)], forState: UIControlState.Normal)
+        UINavigationBar.appearance().setTitleVerticalPositionAdjustment(2, forBarMetrics: UIBarMetrics.Default)
         self.locationManager = CLLocationManager()
         self.locationManager!.delegate = self
         self.locationManager!.distanceFilter  = kCLDistanceFilterNone
@@ -82,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
         let modelURL = NSBundle.mainBundle().URLForResource("Clinic_Today", withExtension: "momd")
-        return NSManagedObjectModel(contentsOfURL: modelURL)
+        return NSManagedObjectModel(contentsOfURL: modelURL!)
     }()
 
     lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
